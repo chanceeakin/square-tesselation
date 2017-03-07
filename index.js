@@ -8,7 +8,8 @@ AFRAME.registerComponent('squaretessel', {
     height: {default: 5},
     widthSegments: {default: 32},
     heightSegments: {default: 32},
-    color: {type: 'string', default: '0x000000'}
+    color: {type: 'string', default: '0x000000'},
+    xrotation: {default: 90}
   },
   init: function () {
     var scene = this.el.object3D;
@@ -19,6 +20,7 @@ AFRAME.registerComponent('squaretessel', {
     var geometry = new THREE.PlaneGeometry( data.width, data.height, data.widthSegments, data.heightSegments );
     var material = new THREE.MeshBasicMaterial( {color: data.color, side: THREE.DoubleSide} );
     var plane = new THREE.Mesh( geometry, material );
+    plane.rotation.x = data.xrotation;
     scene.add( plane );
   },
   remove: function () {
