@@ -1,0 +1,36 @@
+{
+  "name": "square-tesselation",
+  "version": "0.2.0-alpha",
+  "description": "Aframe component for creating a tesselation of a square image.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "bundle": "browserify examples/basic/basic.js -o examples/basic/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanceeakin/square-tesselation.git"
+  },
+  "keywords": [
+    "aframe",
+    "vr"
+  ],
+  "author": "Chance Eakin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chanceeakin/square-tesselation/issues"
+  },
+  "homepage": "https://github.com/chanceeakin/square-tesselation#readme",
+  "dependencies": {
+    "aframe": "^0.5.0",
+    "aframe-gridhelper-component": "^0.2.0",
+    "browserify": "^14.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
