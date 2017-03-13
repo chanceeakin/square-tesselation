@@ -27,10 +27,12 @@
   "dependencies": {
     "aframe": "^0.5.0",
     "aframe-gridhelper-component": "^0.2.0",
-    "browserify": "^14.1.0"
+    "browserify": "^14.1.0",
+    "express": "^4.15.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "standard": "^9.0.1"
   }
 }

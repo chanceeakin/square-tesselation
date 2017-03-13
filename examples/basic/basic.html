@@ -2,18 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, World! • A-Frame</title>
+    <title>Basic Aframe Time</title>
     <meta name="description" content="Hello, World! • A-Frame">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="../../index.js"></script>
+    <script src="../../gridhelper.js"></script>
   </head>
   <body>
     <a-scene >
-      <a-entity squaretessel="width: 3; height: 3; widthSegments: 10; heightSegments: 10; color: #00ff00"></a-entity>
+      <a-sky color="black"></a-sky>
+      <a-entity position="0 0 0" trongrid="size: 10; divisions: 10; colorCenterLine: rgb(79, 228, 242); colorGrid: rgb(79, 228, 242)"></a-entity>
+      <a-entity position="0 0 20" trongrid="size: 10; divisions: 10; colorCenterLine: rgb(0, 242, 2); colorGrid: rgb(0, 242, 2)"></a-entity>
+      <a-entity position="20 0 0" trongrid="size: 10; divisions: 10; colorCenterLine: rgb(79, 228, 242); colorGrid: rgb(79, 228, 242)"></a-entity>
+      <a-entity position="20 0 20" trongrid="size: 10; divisions: 10; colorCenterLine: rgb(255, 0, 2); colorGrid: rgb(255, 0, 2)"></a-entity>
 
-      <a-entity position="0 0 3.8">
-        <a-camera></a-camera>
+
+      <a-entity position="0 1 10">
+        <a-camera id="camera"></a-camera>
       </a-entity>
     </a-scene>
+    <script>
+      var cameraEl = document.querySelector('#camera')
+      var worldPos = new THREE.Vector3()
+      worldPos.setFromMatrixPosition(cameraEl.object3D.matrixWorld)
+      console.log(worldPos.x)
+      cameraEl.addEventListener('componentchanged', function (evt) {
+        if (evt.detail.name === 'position') {
+          console.log(Number(evt.detail.newData.x / 10).toFixed(2))
+        }
+      })
+
+    </script>
   </body>
 </html>
