@@ -6,8 +6,8 @@ AFRAME.registerComponent('trongrid', {
   schema: {
     size: {default: 10},
     divisions: {default: 10},
-    colorCenterLine: {default: '#000000'},
-    colorGrid: {default: '#000000'}
+    colorCenterLine: {default: '#bada55'},
+    colorGrid: {default: '#bada55'}
   },
   init: function () {
     var scene = this.el.object3D

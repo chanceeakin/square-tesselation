@@ -6,4 +6,5 @@ app.use(express.static(process.cwd() + '/examples/basic'))
 
 app.listen(3000, function () {
 console.log('App listening on PORT: ' + 3000)
+console.log('hey emma3')
 })
